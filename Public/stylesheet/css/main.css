@@ -64,7 +64,7 @@ h5 {
   font-size: 18px;
   font-weight: 600; }
 
-#main-nav {
+.main-nav {
   background: #282828;
   display: flex;
   justify-content: space-between;
@@ -76,38 +76,40 @@ h5 {
   position: fixed;
   width: 100%;
   z-index: 9999; }
-  #main-nav .brandlogo {
+  .main-nav .brandlogo {
     width: 50%; }
-    #main-nav .brandlogo span {
+    .main-nav .brandlogo a:hover {
+      text-decoration: none; }
+    .main-nav .brandlogo span {
       font-size: 30px;
       color: #fff; }
-  #main-nav nav {
+  .main-nav nav {
     width: 50%; }
-    #main-nav nav ul {
+    .main-nav nav ul {
       width: 100%;
       display: flex;
       justify-content: space-between;
       padding: 20px 0 25px; }
-      #main-nav nav ul li a {
+      .main-nav nav ul li a {
         color: #fff;
         height: 100%;
         position: relative;
         padding-bottom: 5px;
         overflow: hidden; }
-        #main-nav nav ul li a:before {
+        .main-nav nav ul li a:before {
           content: '';
           height: 2px;
           width: 0;
-          background: #44bd32;
+          background: #007bff;
           display: inline-block;
           position: absolute;
           bottom: 0;
           left: 0;
           transition: all .3s ease; }
-        #main-nav nav ul li a:hover {
+        .main-nav nav ul li a:hover {
           color: #fff;
           text-decoration: none; }
-          #main-nav nav ul li a:hover:before {
+          .main-nav nav ul li a:hover:before {
             width: 100%; }
 
 .big-buttons {
@@ -138,7 +140,7 @@ h5 {
       display: block;
       height: 10px;
       width: 100%;
-      background: #44bd32;
+      background: #007bff;
       bottom: 0;
       left: 0;
       transform: translateX(-100%);
@@ -227,7 +229,7 @@ i.terminal-code {
     height: 50px; }
   .copyWrapper button:after {
     content: 'kopiert';
-    background: #44bd32;
+    background: #007bff;
     padding: 10px 20px;
     color: #fff;
     border: 1px solid #fff;

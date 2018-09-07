@@ -30,7 +30,8 @@ h5 {
   font-weight: 600;
 }
 
-#main-nav {
+
+.main-nav {
   background: #282828;
   display: flex;
   justify-content: space-between;
@@ -44,6 +45,11 @@ h5 {
   z-index: 9999;
   .brandlogo {
     width: 50%;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
     span{
       font-size: 30px;
       color: #fff;
@@ -67,7 +73,7 @@ h5 {
             content: '';
             height: 2px;
             width: 0;
-            background: #44bd32;
+            background: #007bff;
             display: inline-block;
             position: absolute;
             bottom: 0;
@@ -120,7 +126,7 @@ h5 {
       display: block;
       height: 10px;
       width: 100%;
-      background: #44bd32;
+      background: #007bff;
       bottom: 0;
       left: 0;
       transform: translateX(-100%);
@@ -243,7 +249,7 @@ i.terminal-code {
     }
     &:after {
       content: 'kopiert';
-      background: #44bd32;
+      background: #007bff;
       padding: 10px 20px;
       color: #fff;
       border: 1px solid #fff;
