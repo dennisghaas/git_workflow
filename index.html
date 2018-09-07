@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="Public/stylesheet/css/main.css">
-    <link href="Public/js/libaries/jquery_3.3.1.js">
-    <link href="Public/js/libaries/bootstrap.bundle.min.js">
+    <script src="Public/js/libaries/jquery_3.3.1.js"></script>
+    <script src="Public/js/libaries/bootstrap.min.js"></script>
+    <script src="Public/js/app.js"></script>
 </head>
 <body>
 
@@ -23,20 +24,213 @@
 
 <section class="main-section">
     <div class="container">
-        <div class="big-buttons">
+        <section class="big-buttons">
             <div class="big-buttons-content">
-                <div class="big-buttons-content-text">
-                    <h3>Sieh dir die Dokumentation zu PHP Storm an</h3>
-                </div>
-                <img src="Public/img/php-strom-link-logo.jpg">
+                <a href="#section1">
+                    <div class="big-buttons-content-text">
+                        <h3>Sieh dir die Dokumentation zu PHP Storm an</h3>
+                    </div>
+                    <img src="Public/img/php-strom-link-logo.jpg">
+                </a>
             </div>
             <div class="big-buttons-content">
-                <div class="big-buttons-content-text">
-                    <h3>Sieh dir die Dokumentation zu Git an</h3>
-                </div>
-                <img src="Public/img/git-link-logo.jpg">
+                <a href="#section2">
+                    <div class="big-buttons-content-text">
+                        <h3>Sieh dir die Dokumentation zu Git an</h3>
+                    </div>
+                    <img src="Public/img/git-link-logo.jpg">
+                </a>
             </div>
-        </div>
+        </section>
+
+        <section class="storm-docu" id="section1">
+            <h2>PhpStorm Dokumentation</h2>
+            <div class="accordion" id="accordion_one">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                1. Git – Installieren und Oberfläche
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                         data-parent="#accordion_one">
+                        <div class="card-body">
+                            <h3>Downloading Git:</h3>
+                            <p>Bevor mit Git gestartet werden kann, muss auf dem Rechner erst Git installiert
+                                werden:</p>
+                            <ul>
+                                <li>Für Windows: <a
+                                        href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Link</a>
+                                </li>
+                                <li>Für MacOS: <a href="https://git-scm.com/download/mac">Link</a></li>
+                                <li>Für Linux: <a href="https://git-scm.com/download/linux">Link</a></li>
+                            </ul>
+
+                            <h4>Authentifizierung bei Github mittels eines SSH-Schlüsselpaares</h4>
+                            <ul>
+                                <li>Überprüfen, ob schon ein Schlüsselpaar auf dem Rechner existiert:</li>
+                                <li><a href="https://help.github.com/articles/checking-for-existing-ssh-keys/">Link</a>
+                                </li>
+                                <li>Falls keines existiert oder du die vorhandenen nicht benutzen möchtest, musst du ein
+                                    neues erstellen
+                                </li>
+                                <li>
+                                    <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Link</a>
+                                </li>
+                            </ul>
+
+                            <h4>Einstellung in PHPStorm:</h4>
+                            <p>In den Einstellung(cmd+,) kann man unter Version Control → Git u.a. den Pfad zum
+                                Git-Programm angeben.</p>
+
+                            <h4>Am Projekt arbeiten:</h4>
+                            <img src="Public/img/terminal_phpstorm_docu.jpg"
+                                 style="width: 50%; height: auto; margin-top: 20px;">
+
+                            <p>Via Git Clone gewünschtes Repository herunterladen. Bdt. Terminal öffnen und Repository
+                                im gewünschten Ordner abspeichern. In PHPStorm genau dieses Repository öffnen.
+                                ( Eine von vielen Möglichkeiten ein Git-Projekt zu öffnen )</p>
+
+
+                            <h3>Git Oberfläche erklärt:</h3>
+
+                            <h4>Git Branches:</h4>
+                            <p>Unten rechts am Ende des Bildrands, neben der Formatierung (z.B. UTF-8),
+                                ist Git:(Master) zu sehen. Bei Click auf jenes, öffnet sich ein Fenster. In dieser
+                                Ansicht können ältere Branches geladen werden oder neue erstellt werden.
+                                Hauptbranches sind (Dev),(Stage) und Master.</p>
+
+                            <h4>Version Control:</h4>
+                            <p>Über die Version Control (cmd+9), anschließend “Log”, können vergangene Push Vorgänge
+                                nachgesehen und nachvollzogen werden.
+                                Bei Auswahl eines Pushes erscheint auf der rechten Seite die Datei/en, die sich beim
+                                Push verändert haben.
+                                Bei Doppelclick auf diese, öffnet sich ein Fenster. Auf der linken Seite zu sehen, Datei
+                                vor dem Push. Auf der rechten Seite, Datei nach dem Push.
+                                Beim Reiter „Local Changes“ können lokale Änderungen angesehen und nachvollzogen
+                                werden.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                2. SCSS Komprimierung
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_one">
+                        <div class="card-body">
+                            <h3>SCSS Komprimierung</h3>
+                            <p style="margin-bottom: 10px;">Damit die Komprimierung überhaupt funktioniert, muss Sass
+                                installiert werden. <br>
+                                Überprüfen ob Sass installiert ist: <i class="terminal-code">sass -v</i>
+                                Wenn es nicht installiert ist oder Fehler auswirft, folgende Schritte befolgen:</p>
+                            <p>1- <i class="terminal-code">sudo gem install rails</i> ( Install Rails )</p>
+                            <p>2- <i class="terminal-code">sudo gem install sass</i> ( Install Sass )</p>
+
+                            <p>Wenn offen – schließe PHPStorm und öffne es erneut. Zum überprüfen, ob Sass installiert
+                                wurde, den Terminal Befehl: <i class="terminal-code">sass -v</i>erneut benutzen.</p>
+
+                            <h3>Komprimierung zu PHP Storm Projekt hinzufügen:</h3>
+                            <h4>Pfad: Preferences(cmd+,) → Tools → File Watchers</h4>
+                            <p>Über das „+“ Icon das SCSS Template hinzufügen.
+                                Das ganze wird über die Erweiterung File Watcher (Standardmäßig in PHP Storm integriert)
+                                gesteuert.</p>
+                            <img style="margin-top: 20px;" src="Public/img/file-watcher-scss-phpstorm.jpg" width="837"
+                                 height="629">
+                            <p>
+                                „Track only root files“ → Falls der Haken aus ist, unbedingt einschalten.
+                                Falls dieser aus ist, wir von jeder .scss Datei eine .css Datei erstellt. Das wäre
+                                obsolet, da die main.css schon alle Informationen der Stylesheets beinhaltet.
+                            </p>
+
+                            <div class="copyWrapper">
+                                <h4>Arguments:</h4>
+                                <div class="copyItems">
+                                    <input type="text" id="copyTarget" value="--no-cache --update $FileName$:../css/$FileNameWithoutExtension$.css"> <button id="copyButton"><img src="Public/img/copy_icon.png" width="100" height="100"></button>
+                                </div>
+                                <h4>Output paths to refresh:</h4>
+                                <div class="copyItems">
+                                    <input type="text" id="copyTarget2" value="../css$FileNameWithoutExtension$.css:../css$FileNameWithoutExtension$.css.map"> <button id="copyButton2"><img src="Public/img/copy_icon.png" width="100" height="100"></button>
+                                </div>
+                            </div>
+                            <p style="margin-top: 20px;">Bei Advanced Option „Auto-save[...]“ ausstellen. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                3. Server einrichten und Dateien hochladen
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                         data-parent="#accordion_one">
+                        <div class="card-body">
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                4. Wichtige Plugins für PhpStorm
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                         data-parent="#accordion_one">
+                        <div class="card-body">
+                            <h3>Wichtige Plugins für PhpStorm</h3>
+                            <ul>
+                                <li>1. typoscript (für Dateiendungen → .typoscript)</li>
+                                <li>2. .ignore → für z.B. Dateien wie .gitignore</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                    aria-expanded="false" aria-controls="collapseFive">
+                                5. Nice to have
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                         data-parent="#accordion_one">
+                        <div class="card-body">
+                            <h3>Nice to have</h3>
+                            <ul>
+                                <li>1. Keypromoter X → Zeigt bei Click mit der Maus den Shortcut für die Option an. </li>
+                                <li>2. String Manipulation → Mehrere Optionen Texte zu formatieren. <a href="https://plugins.jetbrains.com/plugin/2162-string-manipulation">Beispiel</a></li>
+                                <li>CodeGlance → Zeigt wie in SublimeText die gesamte Struktur des Codes der Datei.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
     </div>
 </section>
 
