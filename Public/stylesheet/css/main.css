@@ -1,7 +1,19 @@
 @import url(../Libary/bootstrap-4/css/bootstrap.min.css);
 body {
   overflow-x: hidden;
-  height: 100vh;
   display: block; }
+
+#main-footer {
+  margin-top: 80px;
+  background: #28a745;
+  padding: 40px 0; }
+  #main-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 0; }
+    #main-footer ul li {
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
