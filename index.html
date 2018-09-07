@@ -186,6 +186,74 @@
                          data-parent="#accordion_one">
                         <div class="card-body">
 
+                            <h3>Den Server einrichten:</h3>
+                            <p>Über die Einstellung/Preferences (cmd+,) → Depolyment → auf das (+) Icon drücken. Der Name
+                            ist in der Regel egal, es muss nicht die exakte Domain sein. Es könnte auch z.B. Live oder
+                                Stage heißen.</p>
+                            <img src="Public/img/server-einrichten/1.server.png">
+                            <p>Anschließend den richtigen Typen auswählen.
+                            Die nachfolgende Oberfläche ist eigentlich selbsterklärend. Bei FTP Systemen muss unter
+                            „Advanced options...“ der Passive Mode aktiviert sein. <br>
+                                <img src="Public/img/server-einrichten/2.server.png"><br>
+                                Zur Überprüfung ob du dich mit dem
+                            Server korrekt verbunden hast, checke dies mit dem Button: „Test FTP connection...“.
+                            Unbedingt „Apply“ drücken, sonst gehen die Einstellungen verloren. „Save password“ empfehle
+                            ich auch einzuschalten.
+                            Unter dem Reiter „Mappings“ kannst du anschließend den Server Pfad bestimmen sowie den
+                                Lokalen. ( Je nach Projekt und Anbieter unterschiedlich )</p>
+
+                            <p>Zum Überprüfen ob die Mappings korrekt sind, einfach eine Datei aus dem lokalen Pfad mit dem
+                            Server synchronisieren. Zeigt dieser an „nothing to show“ so sind die Maps richtig. Wird
+                            allerdings ein Fenster geöffnet, in der nur die Lokale Datei zu sehen ist, sind die Mappings
+                                falsch.</p>
+
+                            <img src="Public/img/server-einrichten/8.server.png">
+
+                            <p>Für´s arbeiten mit Server Systemen empfiehlt sich ein bestimmtes Fenster im Programm zu
+                            aktivieren, falls es nicht standardmäßig zu sehen ist.
+                            Es handelt sich um den Remote Host. Dieser zeigt eine Oberfläche, der Dateien auf dem
+                            Server. Pfad: Tools → Deployment → Browse Remote Host.
+                            Falls nicht der richtige Server angezeigt werden sollte, kann über den Dropdown der richtige
+                            ausgewählt werden. Über den Button mit den drei Punkten, kann auch zur Servererinrichtung
+                            gelangt werden.</p>
+
+                            <h4>Bevor du hochlädst:</h4>
+                            <p>Bevor du Änderungen auf einen Server lädst, musst du erstmal sicher gehen, dass deine lokale
+                            Datei dem Server identisch ist. Rechtsclick → Deployment → Sync with Developed to […].
+                                Sind
+                            diese nicht identisch, so muss der Stand des Servers, deiner Datei übereinstimmen. Bei Git
+                            basierten Systemen muss das Projekt geupdated werden. Blaues Icon oben im Reiter. (link zu
+                            Git Docu)
+                            Bei Projekten die nicht auf Git basieren, muss der komplette Stand des Servers lokal
+                                heruntergeladen werden.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img style="width: 100%; height: auto;" src="Public/img/server-einrichten/3.server.png">
+                                </div>
+                                <div class="col-md-6">
+                                    <img style="width: 100%; height: auto;" src="Public/img/server-einrichten/6.server.png">
+                                </div>
+                            </div>
+
+                            <h4>Dateien hochladen:</h4>
+                            <p>Über Sync with developed to […] kann nicht nur Lokal mit Server verglichen werden, sonder
+                            auch die Dateien die Lokal unterschiedlich sind hochgeladen werden. Bevor wie wild alles auf
+                            den Server gelangt, erst die Änderungen ansehen. PhpStorm hilft hierbei, Ungleichheiten sind
+                                grün hinterlegt.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img style="width: 100%; height: auto;" src="Public/img/server-einrichten/5.server.png">
+                                </div>
+                                <div class="col-md-6">
+                                    <img style="width: 100%; height: auto;" src="Public/img/server-einrichten/6.server.png">
+                                </div>
+                            </div>
+
+                            <p>„Sync all“ und „sync selected“ stehen zur Auswahl. Bei sync all, werden alle Ungleichen
+                                Dateien auf den Server geladen. Bei sync selected nur die jenigen die ausgewählt wurden.</p>
+
+                            <p>Unter Rechtsclick „Upload to [...]“ kann ebenfalls die Datei hochgeladen werden. Hier wird
+                                nur die Datei hochgeladen, die im Fenster geöffnet ist.</p>
 
                         </div>
                     </div>
@@ -387,8 +455,10 @@
                             <p>6.1 Mit commit and push haben von nun auch andere Entwickler zugriff auf die
                                 Änderungen.</p>
                             <div class="row">
-                                <div class="col-md-6"><img style="width: 100%; height: auto;" src="Public/img/git-workflow/7.push-changes.png"></div>
-                                <div class="col-md-6"><img style="width: 100%; height: auto;" src="Public/img/git-workflow/8.push-window.png"></div>
+                                <div class="col-md-6"><img style="width: 100%; height: auto;"
+                                                           src="Public/img/git-workflow/7.push-changes.png"></div>
+                                <div class="col-md-6"><img style="width: 100%; height: auto;"
+                                                           src="Public/img/git-workflow/8.push-window.png"></div>
                             </div>
                             <h4>7. Stage System auschecken und Projekt updaten</h4>
                             <p>7.1. Ticketbranch in den Stage Branch mergen</p>
